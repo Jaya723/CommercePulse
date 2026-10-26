@@ -12,6 +12,7 @@ CommercePulse is a **full-stack big data analytics platform** that processes his
 - **Frontend**: React, Recharts, React-Leaflet
 - **Data**: Parquet (columnar storage)
 - **Pipeline**: Bronze → Silver → Gold (Medallion Architecture)
+- **Execution Environment**: Google Colab (PySpark cloud environment)
 
 **Timeline**: 7 days
 **Target**: College submission + Software Engineering/Data Engineering interviews
