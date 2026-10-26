@@ -1,0 +1,905 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CommercePulse Data Profiling Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .header { background-color: #2c3e50; color: white; padding: 20px; border-radius: 5px; }
+        .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .summary-card { background: white; padding: 15px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .summary-card h3 { margin: 0 0 10px 0; color: #2c3e50; }
+        .summary-card .value { font-size: 24px; font-weight: bold; color: #3498db; }
+        .dataset { background: white; padding: 20px; margin: 20px 0; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .dataset h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #3498db; color: white; }
+        tr:hover { background-color: #f5f5f5; }
+        .good { color: green; }
+        .warning { color: orange; }
+        .bad { color: red; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>CommercePulse Data Profiling Report</h1>
+        <p>Generated: 2026-10-24 20:12:40</p>
+    </div>
+
+    <div class="summary">
+        <div class="summary-card">
+            <h3>Total Datasets</h3>
+            <div class="value">9</div>
+        </div>
+        <div class="summary-card">
+            <h3>Total Rows</h3>
+            <div class="value">1,550,922</div>
+        </div>
+        <div class="summary-card">
+            <h3>Total Size</h3>
+            <div class="value">307.1 MB</div>
+        </div>
+        <div class="summary-card">
+            <h3>Quality Score</h3>
+            <div class="value">87/100</div>
+        </div>
+    </div>
+
+    <div class="dataset">
+        <h2>Customers</h2>
+        <p><strong>File:</strong> data\raw\olist_customers_dataset.csv</p>
+        <p><strong>Rows:</strong> 99,441 | <strong>Columns:</strong> 5 | <strong>Size:</strong> 26.59 MB</p>
+        <p><strong>Duplicates:</strong> 0 (0.0%)</p>
+
+        <h3>Column Details</h3>
+        <table>
+            <tr>
+                <th>Column</th>
+                <th>Type</th>
+                <th>Null Count</th>
+                <th>Null %</th>
+                <th>Unique Values</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Mean</th>
+            </tr>
+
+            <tr>
+                <td>customer_id</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>99,441</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>customer_unique_id</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>96,096</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>customer_zip_code_prefix</td>
+                <td>int64</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>14,994</td>
+                <td>1003.0</td>
+                <td>99990.0</td>
+                <td>35137.47458291851</td>
+            </tr>
+
+            <tr>
+                <td>customer_city</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>4,119</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>customer_state</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>27</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="dataset">
+        <h2>Geolocation</h2>
+        <p><strong>File:</strong> data\raw\olist_geolocation_dataset.csv</p>
+        <p><strong>Rows:</strong> 1,000,163 | <strong>Columns:</strong> 5 | <strong>Size:</strong> 129.38 MB</p>
+        <p><strong>Duplicates:</strong> 261,831 (26.18%)</p>
+
+        <h3>Column Details</h3>
+        <table>
+            <tr>
+                <th>Column</th>
+                <th>Type</th>
+                <th>Null Count</th>
+                <th>Null %</th>
+                <th>Unique Values</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Mean</th>
+            </tr>
+
+            <tr>
+                <td>geolocation_zip_code_prefix</td>
+                <td>int64</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>19,015</td>
+                <td>1001.0</td>
+                <td>99990.0</td>
+                <td>36574.16646586607</td>
+            </tr>
+
+            <tr>
+                <td>geolocation_lat</td>
+                <td>float64</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>717,360</td>
+                <td>-36.6053744107061</td>
+                <td>45.06593318269697</td>
+                <td>-21.176152910383962</td>
+            </tr>
+
+            <tr>
+                <td>geolocation_lng</td>
+                <td>float64</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>717,613</td>
+                <td>-101.46676644931476</td>
+                <td>121.10539381057764</td>
+                <td>-46.390541320935775</td>
+            </tr>
+
+            <tr>
+                <td>geolocation_city</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>8,011</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>geolocation_state</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>27</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="dataset">
+        <h2>Order Items</h2>
+        <p><strong>File:</strong> data\raw\olist_order_items_dataset.csv</p>
+        <p><strong>Rows:</strong> 112,650 | <strong>Columns:</strong> 7 | <strong>Size:</strong> 35.99 MB</p>
+        <p><strong>Duplicates:</strong> 0 (0.0%)</p>
+
+        <h3>Column Details</h3>
+        <table>
+            <tr>
+                <th>Column</th>
+                <th>Type</th>
+                <th>Null Count</th>
+                <th>Null %</th>
+                <th>Unique Values</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Mean</th>
+            </tr>
+
+            <tr>
+                <td>order_id</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>98,666</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>order_item_id</td>
+                <td>int64</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>21</td>
+                <td>1.0</td>
+                <td>21.0</td>
+                <td>1.1978339991122948</td>
+            </tr>
+
+            <tr>
+                <td>product_id</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>32,951</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>seller_id</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>3,095</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>shipping_limit_date</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>93,318</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>price</td>
+                <td>float64</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>5,968</td>
+                <td>0.85</td>
+                <td>6735.0</td>
+                <td>120.65373901464713</td>
+            </tr>
+
+            <tr>
+                <td>freight_value</td>
+                <td>float64</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>6,999</td>
+                <td>0.0</td>
+                <td>409.68</td>
+                <td>19.990319928983578</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="dataset">
+        <h2>Order Payments</h2>
+        <p><strong>File:</strong> data\raw\olist_order_payments_dataset.csv</p>
+        <p><strong>Rows:</strong> 103,886 | <strong>Columns:</strong> 5 | <strong>Size:</strong> 16.23 MB</p>
+        <p><strong>Duplicates:</strong> 0 (0.0%)</p>
+
+        <h3>Column Details</h3>
+        <table>
+            <tr>
+                <th>Column</th>
+                <th>Type</th>
+                <th>Null Count</th>
+                <th>Null %</th>
+                <th>Unique Values</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Mean</th>
+            </tr>
+
+            <tr>
+                <td>order_id</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>99,440</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>payment_sequential</td>
+                <td>int64</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>29</td>
+                <td>1.0</td>
+                <td>29.0</td>
+                <td>1.0926785129853878</td>
+            </tr>
+
+            <tr>
+                <td>payment_type</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>5</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>payment_installments</td>
+                <td>int64</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>24</td>
+                <td>0.0</td>
+                <td>24.0</td>
+                <td>2.853348863176944</td>
+            </tr>
+
+            <tr>
+                <td>payment_value</td>
+                <td>float64</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>29,077</td>
+                <td>0.0</td>
+                <td>13664.08</td>
+                <td>154.10038041699556</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="dataset">
+        <h2>Order Reviews</h2>
+        <p><strong>File:</strong> data\raw\olist_order_reviews_dataset.csv</p>
+        <p><strong>Rows:</strong> 99,224 | <strong>Columns:</strong> 7 | <strong>Size:</strong> 39.12 MB</p>
+        <p><strong>Duplicates:</strong> 0 (0.0%)</p>
+
+        <h3>Column Details</h3>
+        <table>
+            <tr>
+                <th>Column</th>
+                <th>Type</th>
+                <th>Null Count</th>
+                <th>Null %</th>
+                <th>Unique Values</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Mean</th>
+            </tr>
+
+            <tr>
+                <td>review_id</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>98,410</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>order_id</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>98,673</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>review_score</td>
+                <td>int64</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>5</td>
+                <td>1.0</td>
+                <td>5.0</td>
+                <td>4.08642062404257</td>
+            </tr>
+
+            <tr>
+                <td>review_comment_title</td>
+                <td>object</td>
+                <td class="bad">87,656</td>
+                <td class="bad">88.34%</td>
+                <td>4,527</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>review_comment_message</td>
+                <td>object</td>
+                <td class="bad">58,247</td>
+                <td class="bad">58.7%</td>
+                <td>36,159</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>review_creation_date</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>636</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>review_answer_timestamp</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>98,248</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="dataset">
+        <h2>Orders</h2>
+        <p><strong>File:</strong> data\raw\olist_orders_dataset.csv</p>
+        <p><strong>Rows:</strong> 99,441 | <strong>Columns:</strong> 8 | <strong>Size:</strong> 52.94 MB</p>
+        <p><strong>Duplicates:</strong> 0 (0.0%)</p>
+
+        <h3>Column Details</h3>
+        <table>
+            <tr>
+                <th>Column</th>
+                <th>Type</th>
+                <th>Null Count</th>
+                <th>Null %</th>
+                <th>Unique Values</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Mean</th>
+            </tr>
+
+            <tr>
+                <td>order_id</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>99,441</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>customer_id</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>99,441</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>order_status</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>8</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>order_purchase_timestamp</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>98,875</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>order_approved_at</td>
+                <td>object</td>
+                <td class="warning">160</td>
+                <td class="warning">0.16%</td>
+                <td>90,733</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>order_delivered_carrier_date</td>
+                <td>object</td>
+                <td class="warning">1,783</td>
+                <td class="warning">1.79%</td>
+                <td>81,018</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>order_delivered_customer_date</td>
+                <td>object</td>
+                <td class="warning">2,965</td>
+                <td class="warning">2.98%</td>
+                <td>95,664</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>order_estimated_delivery_date</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>459</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="dataset">
+        <h2>Products</h2>
+        <p><strong>File:</strong> data\raw\olist_products_dataset.csv</p>
+        <p><strong>Rows:</strong> 32,951 | <strong>Columns:</strong> 9 | <strong>Size:</strong> 6.30 MB</p>
+        <p><strong>Duplicates:</strong> 0 (0.0%)</p>
+
+        <h3>Column Details</h3>
+        <table>
+            <tr>
+                <th>Column</th>
+                <th>Type</th>
+                <th>Null Count</th>
+                <th>Null %</th>
+                <th>Unique Values</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Mean</th>
+            </tr>
+
+            <tr>
+                <td>product_id</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>32,951</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>product_category_name</td>
+                <td>object</td>
+                <td class="warning">610</td>
+                <td class="warning">1.85%</td>
+                <td>73</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>product_name_lenght</td>
+                <td>float64</td>
+                <td class="warning">610</td>
+                <td class="warning">1.85%</td>
+                <td>66</td>
+                <td>5.0</td>
+                <td>76.0</td>
+                <td>48.47694876472589</td>
+            </tr>
+
+            <tr>
+                <td>product_description_lenght</td>
+                <td>float64</td>
+                <td class="warning">610</td>
+                <td class="warning">1.85%</td>
+                <td>2,960</td>
+                <td>4.0</td>
+                <td>3992.0</td>
+                <td>771.4952846232337</td>
+            </tr>
+
+            <tr>
+                <td>product_photos_qty</td>
+                <td>float64</td>
+                <td class="warning">610</td>
+                <td class="warning">1.85%</td>
+                <td>19</td>
+                <td>1.0</td>
+                <td>20.0</td>
+                <td>2.1889861166939797</td>
+            </tr>
+
+            <tr>
+                <td>product_weight_g</td>
+                <td>float64</td>
+                <td class="warning">2</td>
+                <td class="warning">0.01%</td>
+                <td>2,204</td>
+                <td>0.0</td>
+                <td>40425.0</td>
+                <td>2276.4724877841513</td>
+            </tr>
+
+            <tr>
+                <td>product_length_cm</td>
+                <td>float64</td>
+                <td class="warning">2</td>
+                <td class="warning">0.01%</td>
+                <td>99</td>
+                <td>7.0</td>
+                <td>105.0</td>
+                <td>30.81507784758263</td>
+            </tr>
+
+            <tr>
+                <td>product_height_cm</td>
+                <td>float64</td>
+                <td class="warning">2</td>
+                <td class="warning">0.01%</td>
+                <td>102</td>
+                <td>2.0</td>
+                <td>105.0</td>
+                <td>16.937661234028347</td>
+            </tr>
+
+            <tr>
+                <td>product_width_cm</td>
+                <td>float64</td>
+                <td class="warning">2</td>
+                <td class="warning">0.01%</td>
+                <td>95</td>
+                <td>6.0</td>
+                <td>118.0</td>
+                <td>23.196728277034204</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="dataset">
+        <h2>Sellers</h2>
+        <p><strong>File:</strong> data\raw\olist_sellers_dataset.csv</p>
+        <p><strong>Rows:</strong> 3,095 | <strong>Columns:</strong> 4 | <strong>Size:</strong> 0.59 MB</p>
+        <p><strong>Duplicates:</strong> 0 (0.0%)</p>
+
+        <h3>Column Details</h3>
+        <table>
+            <tr>
+                <th>Column</th>
+                <th>Type</th>
+                <th>Null Count</th>
+                <th>Null %</th>
+                <th>Unique Values</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Mean</th>
+            </tr>
+
+            <tr>
+                <td>seller_id</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>3,095</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>seller_zip_code_prefix</td>
+                <td>int64</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>2,246</td>
+                <td>1001.0</td>
+                <td>99730.0</td>
+                <td>32291.059450726978</td>
+            </tr>
+
+            <tr>
+                <td>seller_city</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>611</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>seller_state</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>23</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="dataset">
+        <h2>Category Translation</h2>
+        <p><strong>File:</strong> data\raw\product_category_name_translation.csv</p>
+        <p><strong>Rows:</strong> 71 | <strong>Columns:</strong> 2 | <strong>Size:</strong> 0.01 MB</p>
+        <p><strong>Duplicates:</strong> 0 (0.0%)</p>
+
+        <h3>Column Details</h3>
+        <table>
+            <tr>
+                <th>Column</th>
+                <th>Type</th>
+                <th>Null Count</th>
+                <th>Null %</th>
+                <th>Unique Values</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Mean</th>
+            </tr>
+
+            <tr>
+                <td>product_category_name</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>71</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>product_category_name_english</td>
+                <td>object</td>
+                <td class="good">0</td>
+                <td class="good">0.0%</td>
+                <td>71</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="dataset">
+        <h2>Data Quality Summary</h2>
+        <table>
+            <tr>
+                <th>Dataset</th>
+                <th>Null %</th>
+                <th>Duplicate %</th>
+                <th>Quality Score</th>
+            </tr>
+
+            <tr>
+                <td>customers</td>
+                <td>0.0%</td>
+                <td>0.0%</td>
+                <td class="good">100/100</td>
+            </tr>
+
+            <tr>
+                <td>geolocation</td>
+                <td>0.0%</td>
+                <td>26.18%</td>
+                <td class="warning">74/100</td>
+            </tr>
+
+            <tr>
+                <td>order_items</td>
+                <td>0.0%</td>
+                <td>0.0%</td>
+                <td class="good">100/100</td>
+            </tr>
+
+            <tr>
+                <td>order_payments</td>
+                <td>0.0%</td>
+                <td>0.0%</td>
+                <td class="good">100/100</td>
+            </tr>
+
+            <tr>
+                <td>order_reviews</td>
+                <td>21.0%</td>
+                <td>0.0%</td>
+                <td class="warning">79/100</td>
+            </tr>
+
+            <tr>
+                <td>orders</td>
+                <td>0.6%</td>
+                <td>0.0%</td>
+                <td class="good">99/100</td>
+            </tr>
+
+            <tr>
+                <td>products</td>
+                <td>0.8%</td>
+                <td>0.0%</td>
+                <td class="good">99/100</td>
+            </tr>
+
+            <tr>
+                <td>sellers</td>
+                <td>0.0%</td>
+                <td>0.0%</td>
+                <td class="good">100/100</td>
+            </tr>
+
+            <tr>
+                <td>category_translation</td>
+                <td>0.0%</td>
+                <td>0.0%</td>
+                <td class="good">100/100</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="dataset">
+        <h2>Recommendations</h2>
+        <ul>
+            <li>Products dataset has 1.85% missing categories - these will be excluded from category analysis</li>
+            <li>Order reviews have high null counts in comment fields - this is expected behavior</li>
+            <li>Orders have null delivery dates for non-delivered orders - filter by status for delivery analysis</li>
+            <li>Geolocation dataset is large (58 MB) - consider aggregating by zip code prefix</li>
+        </ul>
+    </div>
+</body>
+</html>
